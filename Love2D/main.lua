@@ -1,17 +1,20 @@
--- Cette ligne permet d'afficher des traces dans la console pendant l'éxécution
+-- Display any output, such as print.
 io.stdout:setvbuf('no')
 
--- Empèche Love de filtrer les contours des images quand elles sont redimentionnées
--- Indispensable pour du pixel art
+-- Scale image with nearest neighbor interpolation.
 love.graphics.setDefaultFilter("nearest")
 
--- Cette ligne permet de déboguer pas à pas dans ZeroBraneStudio
-if arg[#arg] == "-debug" then require("mobdebug").start() end
+-- Sets the seed of the random number generator using the specified integer number.
+math.randomseed(love.timer.getTime())
+
+-- Returns the distance between two points.
+function math.dist(x1,y1, x2,y2) return ((x2-x1)^2+(y2-y1)^2)^0.5 end
+
 
 function love.load()
   
-  largeur_ecran = love.graphics.getWidth()
-  hauteur_ecran = love.graphics.getHeight()
+  screenWidth = love.graphics.getWidth() 
+  screenHeight = love.graphics.getHeight() 
   
 end
 
