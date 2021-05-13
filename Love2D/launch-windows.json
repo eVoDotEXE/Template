@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "name": "Debug LÖVE game",
+          "type": "lua-local",
+          "request": "launch",
+          "program": {
+              "command": "C:/Program Files/LOVE/love.exe"
+          },
+          "args": [
+              "."
+          ],
+          "scriptRoots": [
+              "."
+          ]
+
+      }
+  ]
+}
